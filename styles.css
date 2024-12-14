@@ -79,6 +79,36 @@ body {
     padding: 0 5px;
 }
 
+/* Home page */
+.home-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 0 100px;
+}
+
+.home-text h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.home-text p {
+    font-size: 2rem;
+    max-width: auto;
+    opacity: 0.8;
+}
+
+.home-img {
+    position: absolute;
+    object-fit: cover;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
 
 /* About me page */
 .textAbout {
@@ -204,7 +234,7 @@ body {
 .project-imgcontainer img:nth-child(2) {
     width: 100%;
     max-width: 1000px;
-    height: 220px;
+    height: auto;
     border-radius: 5px;
     margin: 0 20px 0 20px;
 }
@@ -225,4 +255,31 @@ body {
 
 .button:hover {
     box-shadow: 0 8px 10px 0 rgba(0,0,0,0.24);
+}
+
+@media screen and (max-width: 600px) {
+    .content {
+        padding: 10px;
+    }
+
+    .project {
+        padding: 10px;
+    }
+
+    .project-imgcontainer img {
+        margin: 0 10px 0 10px;
+    }
+
+    .project-imgcontainer img:nth-child(2) {
+        margin: 0 10px 0 10px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .skills-grid .skill-item:nth-child(4),
+    .skills-grid .skill-item:nth-child(5) {
+        grid-column: span 1;
+    }
 }
