@@ -52,14 +52,6 @@ body {
     display: none;
 }
 
-.project {
-    text-align: left;
-    padding: 10px;
-    border: 1px solid #1e1d1d;
-    border-radius: 8px;
-    margin: 10px 0;
-}
-
 /* Footer Styling */
 .footer {
     background-color: #333;
@@ -85,4 +77,152 @@ body {
 
 .social-links a {
     padding: 0 5px;
+}
+
+
+/* About me page */
+.textAbout {
+    background-color: #f4f4f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 600px;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#introduce p {
+    color: #333;
+    line-height: 1.6;
+    margin-right: 0;
+    font-size: 23px;
+}
+
+.textAbout-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    margin-top: 0;
+}
+
+.subindMix {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+}
+
+#subind1,#subind2 {
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    font-size: 23px;
+    padding: 5px 10px;
+}
+
+.skill-box {
+    width: 100%;
+    max-width: 1010px;
+    background-color: #f4f4f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px auto;
+
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.skills-grid .skill-item {
+    text-align: center;
+}
+
+.skills-grid .skill-item img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.skills-grid .skill-item:nth-child(3) img {
+    width:  auto;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.skills-grid .skill-item:nth-child(2) img {
+    width:  auto;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.skills-grid .skill-item p {
+    font-size: 16px;
+    margin: 20px;
+}
+
+.skills-grid .skill-item:nth-child(4),
+.skills-grid .skill-item:nth-child(5) {
+    grid-column: span 1;
+}
+
+/* Projects page */
+.project {
+    text-align: left;
+    background-color: #f4f4f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 0 20px 10px;
+    font-family: 'Arial', sans-serif;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1)
+}
+
+.project-imgcontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.project-imgcontainer img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 5px;
+    margin: 0 20px 0 20px;
+}
+
+.project-imgcontainer img:nth-child(2) {
+    width: 100%;
+    max-width: 1000px;
+    height: 220px;
+    border-radius: 5px;
+    margin: 0 20px 0 20px;
+}
+
+.button {
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button:hover {
+    box-shadow: 0 8px 10px 0 rgba(0,0,0,0.24);
 }
