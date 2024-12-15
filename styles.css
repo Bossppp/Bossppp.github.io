@@ -103,11 +103,15 @@ body {
 }
 
 .home-img {
-    position: absolute;
-    object-fit: cover;
-    right: 0;
-    top: 0;
-    height: 100%;
+    flex-shrink: 0;
+    max-width: 40%;
+    text-align: center;
+    transform: translateY(-220px);
+}
+
+.home-img img {
+    width: 100%;
+    height: auto;
 }
 
 /* About me page */
