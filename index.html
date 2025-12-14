@@ -18,6 +18,10 @@
             <div class="home-text">
                 <h1>Peerawit <br> Seemamahawong</h1>
                 <p>CEDT student at Chulalongkorn University</p>
+                <p style="font-size: 1.2rem; margin-top: 20px; opacity: 0.7;">
+                    Passionate about data analysis and software development. 
+                    Explore my projects, skills, and community contributions!
+                </p>
             </div>
             <div class="home-img">
                 <img src="/assets/bossPicbgrm.png" alt="Bosspic">
@@ -73,23 +77,64 @@
     
     <div id="projects" class="content hidden">
         <h1>Projects</h1>
-        <div class="project">
-            <h2>"Heyranyik bot"</h2>
-            <div class="project-imgcontainer">
-                <img src="assets/projects/P1heyranyikDis.png" alt="heyranikDis">
-                <img src="assets/projects/P1heyranyikSheet.png" alt="heyranikSheet">
+        <!-- Personal Projects Section -->
+        <div class="projects-category">
+            <div class="category-header">
+                <h2>Personal Projects</h2>
             </div>
-            <p>This is a Discord bot that can analyze slip images from Google Forms and put the slip data into Google Sheets after that, it will notify data to text channel discord.</p>
-            <button class="button" onclick="location.href='https://github.com/Bossppp/HeyranyikBot'">github code</button>
+            
+            <div class="project">
+                <h2>"Heyranyik bot"</h2>
+                <div class="project-imgcontainer">
+                    <img src="assets/projects/P1heyranyikDis.png" alt="heyranikDis">
+                    <img src="assets/projects/P1heyranyikSheet.png" alt="heyranikSheet">
+                </div>
+                <p>This is a Discord bot that can analyze slip images from Google Forms and put the slip data into Google Sheets after that, it will notify data to text channel discord.</p>
+                <button class="button" onclick="location.href='https://github.com/Bossppp/HeyranyikBot'">GitHub Code</button>
+            </div>
+            
+            <div class="project">
+                <h2>"Salmon Fortune"</h2>
+                <div class="project-imgcontainer">
+                    <img src="assets/projects/P2salmonSelect.png" alt="salmonSelect">
+                    <img src="assets/projects/P2salmonResult.png" alt="salmonResult">
+                </div>
+                <p>This is a fortune teller with LLM. That can tell your daily fortune by asking and can select teller persona as you wish.</p>
+                <button class="button" onclick="location.href='https://github.com/Bossppp/Salmon-Fortune'">GitHub Code</button>
+            </div>
         </div>
-        <div class="project">
-            <h2>"Heyranyik bot"</h2>
-            <div class="project-imgcontainer">
-                <img src="assets/projects/P2salmonSelect.png" alt="salmonSelect">
-                <img src="assets/projects/P2salmonResult.png" alt="salmonResult" style="width:500px;">
+        
+        <!-- University Term Projects Section -->
+        <div class="projects-category">
+            <div class="category-header term-projects">
+                <h2>University Term Projects</h2>
             </div>
-            <p>This is a fortune teller with LLM. That can tell your daily fortune by asking and can select teller persona as you wish.</p>
-            <button class="button" onclick="location.href='https://github.com/Bossppp/Salmon-Fortune'">github code</button>
+            <div class="project">
+                <h2>Introduction to Data Science and Data Engineering (DSDE) term project</h2>
+                <div class="project-imgcontainer">
+                    <img src="assets/projects/PDsdevizPic.png" alt="vizPic">
+                </div>
+                <p>Developed a clustering model to analyze and identify recurring problem patterns in different districts of Bangkok. I was responsible for data preparation, including data cleaning and feature engineering, and also served as the project manager</p>
+                <button class="button" onclick="location.href='https://github.com/DSDE-Project-SorKorRearn/Data-preparation.git'">GitHub Code</button>
+            </div>
+            <div class="project">
+                <h2>Embedded System term project</h2>
+                <div class="project-imgcontainer">
+                    <img src="assets/projects/PEmControl.jpg" alt="Control" style="height: 300px; width: auto; margin-right: 10px;">
+                    <img src="assets/projects/PEmSimu.jpg" alt="Simu" style="height: 500px; width: auto;">
+                </div>
+                <p>Designed and developed a smart study room system that enables a focus mode through face recognition on ESP32. The system consists of three boards: two gateways and one sensor node. I worked as the system designer and implemented the gateway, which manages communication between sensor nodes and the cloud, as well as controls actuators based on system states.</p>
+                <button class="button" onclick="location.href='https://github.com/Embedded-System-Project-Acoustic/Full-Microcontroller.git'">GitHub Code</button>
+            </div>
+            <div class="project">
+                <h2>Software Engineering System term project</h2>
+                <div class="project-imgcontainer">
+                    <img src="assets/projects/PSeRoom.png" alt="Room">
+                    <img src="assets/projects/PSeTest.png" alt="Test" style="height: 300px; width: auto; margin-left: 10px;">
+                </div>
+                <p>Built a web-based hotel booking system with role-based access control and CRUD operations for reservations and management. I worked as a frontend developer and tester, and wrote end-to-end tests using Playwright to ensure system reliability and correctness.</p>
+                <button class="button" onclick="location.href='https://github.com/2110503-2564/se-project-22_more-concern-na.git'">GitHub Code</button>
+            </div>
         </div>
     </div>
     
@@ -110,6 +155,5 @@
         </div>
     </footer>
     <script src="script.js"></script>
-    
 </body>
 </html>
