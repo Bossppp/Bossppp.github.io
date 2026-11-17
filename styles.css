@@ -3,7 +3,7 @@
 
   Layout idea: a spec sheet. Each section names itself in a left rail and puts
   its content on the right, separated by hairlines. One loud thing per screen:
-  the pink portrait panel up top, and the request tracer further down.
+  the portrait up top, and the request tracer further down.
 
   Cascade layers keep specificity flat. Later layers win, so a component never
   has to out-specify the base styles.
@@ -252,8 +252,8 @@
   }
   .hero__portrait {
     margin: 0;
-    aspect-ratio: 5 / 6;
-    background: var(--pink);
+    aspect-ratio: 5 / 6; /* the photo's own ratio, so wide screens show all of it */
+    background: var(--sunk);
     border-radius: 3px;
     overflow: hidden;
   }
@@ -261,7 +261,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 50% 100%;
   }
 
   .facts {
@@ -328,8 +327,9 @@
 
   @media (max-width: 52rem) {
     .hero { grid-template-columns: minmax(0, 1fr); }
+    /* A wide slice on small screens, positioned to keep the face in frame. */
     .hero__portrait { aspect-ratio: 16 / 11; }
-    .hero__portrait img { object-position: 50% 18%; }
+    .hero__portrait img { object-position: 50% 23%; }
     .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .section {
       grid-template-columns: minmax(0, 1fr);
