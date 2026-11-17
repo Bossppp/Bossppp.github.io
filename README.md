@@ -107,15 +107,6 @@ npm run build:og                                         # assets/og.jpg
 The public copy has no phone number, and the script refuses to write one into
 the repository. It also fails if the CV grows past one page.
 
-## Domain
-
-`CNAME` points GitHub Pages at `bosspee.com`. The DNS records it needs:
-
-| Type | Name | Value |
-| --- | --- | --- |
-| A | `@` | `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153` |
-| CNAME | `www` | `bossppp.github.io` |
-
 ## Credits
 
 Typefaces are self-hosted under the SIL Open Font License:
