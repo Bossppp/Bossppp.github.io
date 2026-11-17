@@ -1,0 +1,16 @@
+{
+  "name": "bosspee.com",
+  "version": "2.0.0",
+  "description": "Personal site of Peerawit Seemamahawong. Plain HTML, CSS and JavaScript.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "python3 -m http.server 8080",
+    "test": "node --test",
+    "build:cv": "node scripts/render.mjs cv",
+    "build:og": "node scripts/render.mjs og"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

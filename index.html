@@ -1,159 +1,488 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peerawit Seemamahawong · Computer Engineering Student</title>
+  <meta name="description" content="Peerawit (Boss) Seemamahawong is a Computer Engineering and Digital Technology student at Chulalongkorn University. Data engineering and airport operations internships, plus a self-hosted homelab on Proxmox and Raspberry Pi.">
+
+  <!-- Everything is served from this origin. The only outside call is the DNS lookup in the request tracer. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src https://cloudflare-dns.com; img-src 'self' data:; object-src 'none'; base-uri 'none'; form-action 'none'">
+
+  <link rel="canonical" href="https://bosspee.com/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fbf9fa" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#151016" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://bosspee.com/">
+  <meta property="og:title" content="Peerawit Seemamahawong · Computer Engineering Student">
+  <meta property="og:description" content="Data engineering and airport operations internships, plus a self-hosted homelab on Proxmox and Raspberry Pi.">
+  <meta property="og:image" content="https://bosspee.com/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/bai-jamjuree-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/anuphan-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Applies a saved theme before first paint, so the page never flashes the wrong one. -->
+  <script src="js/theme-init.js"></script>
+  <script type="module" src="js/main.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Peerawit Seemamahawong",
+    "alternateName": "Boss",
+    "url": "https://bosspee.com/",
+    "email": "mailto:peerawit_boss@hotmail.com",
+    "jobTitle": "Computer Engineering Student",
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Chulalongkorn University" },
+    "address": { "@type": "PostalAddress", "addressLocality": "Bangkok", "addressCountry": "TH" },
+    "sameAs": [
+      "https://github.com/Bossppp",
+      "https://www.linkedin.com/in/peerawit-seemamahawong-65518a340/"
+    ]
+  }
+  </script>
 </head>
 <body>
-    <div class="navbar">
-        <a href="#" onclick="showPage('home')">Home</a>
-        <a href="#" onclick="showPage('about')">About</a>
-        <a href="#" onclick="showPage('projects')">Projects</a>
-    </div>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <div id="home" class="content">
-        <div class="home-container">
-            <div class="home-text">
-                <h1>Peerawit <br> Seemamahawong</h1>
-                <p>CEDT student at Chulalongkorn University</p>
-                <p style="font-size: 1.2rem; margin-top: 20px; opacity: 0.7;">
-                    Passionate about data analysis and software development. 
-                    Explore my projects, skills, and community contributions!
-                </p>
-            </div>
-            <div class="home-img">
-                <img src="/assets/bossPicbgrm.png" alt="Bosspic">
-            </div>
-        </div>
+  <header class="topbar">
+    <div class="wrap topbar__inner">
+      <a class="topbar__brand" href="#top">Peerawit S.</a>
+      <nav class="topbar__nav" aria-label="Sections">
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" type="button" id="theme-toggle" aria-label="Switch colour theme" hidden>
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.75"/>
+          <path d="M12 3.5a8.5 8.5 0 0 0 0 17z" fill="currentColor"/>
+        </svg>
+      </button>
     </div>
-    
-    <div id="about" class="content hidden">
-        <h1>About Me</h1>
-        <div class="textAbout-container">
-            <div class="textAbout" id="introduce">
-                <p>I'm boss. Peerawit Seemamahawong. I'm a computer engineering student who passionate in data analysis and software development.</p>
-            </div>
-            <div class="subindMix">
-                <div class="textAbout" id="subind1">
-                    <p>I'm 19 years old</p>
-                </div>
-                <div class="textAbout" id="subind2">
-                    <p>CEDT Chulalongkorn University</p>
-                </div>
-            </div>
+  </header>
+
+  <main id="main">
+    <!-- ───────────── Intro ───────────── -->
+    <section class="hero wrap" id="top" aria-labelledby="hero-name">
+      <div class="hero__text">
+        <p class="eyebrow">Computer engineering student · Bangkok</p>
+        <h1 id="hero-name">Peerawit <span>Seemamahawong</span></h1>
+        <p class="hero__lede">
+          I'm Boss, a Computer Engineering and Digital Technology student at Chulalongkorn University.
+          I like the part of engineering where messy operational data turns into something a team can act on.
+          I've done that in two internships. At home I run a homelab: a Proxmox server, and a Raspberry Pi
+          that handles DNS, HTTPS and remote access for the whole network.
+        </p>
+        <ul class="actions" aria-label="Links">
+          <li><a class="button button--primary" href="cv/Peerawit-Seemamahawong-CV.pdf">CV <span class="button__hint">PDF</span></a></li>
+          <li><a class="button" href="https://github.com/Bossppp" rel="me noopener">GitHub</a></li>
+          <li><a class="button" href="https://www.linkedin.com/in/peerawit-seemamahawong-65518a340/" rel="me noopener">LinkedIn</a></li>
+          <li><a class="button" href="#contact">Email</a></li>
+        </ul>
+      </div>
+
+      <figure class="hero__portrait">
+        <img src="assets/img/portrait.webp" width="880" height="917" alt="Peerawit Seemamahawong in a black shirt, looking down to one side." fetchpriority="high">
+      </figure>
+
+      <dl class="facts">
+        <div>
+          <dt>Studying</dt>
+          <dd>B.Eng. Computer Engineering and Digital Technology, 2024 to 2028</dd>
         </div>
-        <div class="skill-box">
-            <p style="font-size: 23px; font-weight: bold">Skills</p>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <img src="assets/skills/htmlLg.png" alt="HTML Logo" />
-                    <p>HTML</p>
-                </div>
-                <div class="skill-item">
-                    <img src="assets/skills/cssLg.png" alt="CSS Logo" />
-                    <p>CSS</p>
-                </div>
-                <div class="skill-item">
-                    <img src="assets/skills/jsLg.png" alt="JavaScript Logo" />
-                    <p>JavaScript</p>
-                </div>
-                <div class="skill-item">
-                    <img src="assets/skills/pythonLg.png" alt="Python Logo" />
-                    <p>Python</p>
-                </div>
-                <div class="skill-item">
-                    <img src="assets/skills/cppLg.png" alt="C++ Logo" />
-                    <p>C++</p>
-                </div>
-                <div class="skill-item">
-                    <img src="assets/skills/sqlLg.png" alt="SQL Logo" />
-                    <p>SQL</p>
-                </div>
-            </div>
+        <div>
+          <dt>Most recent</dt>
+          <dd>Solution and Delivery Engineer Intern at SKY ICT, 2026</dd>
         </div>
+        <div>
+          <dt>Before that</dt>
+          <dd>Data Engineer Intern at Inteltion, 2025</dd>
+        </div>
+        <div>
+          <dt>Works in</dt>
+          <dd>Python, SQL, JavaScript, C++</dd>
+        </div>
+      </dl>
+    </section>
+
+    <!-- ───────────── Experience ───────────── -->
+    <section class="section wrap" id="experience" aria-labelledby="experience-title">
+      <h2 id="experience-title">Experience</h2>
+      <div class="section__body">
+
+        <!-- Filled in by js/timeline.js from the <time> elements below. -->
+        <figure class="strip" id="degree-strip" data-start="2024-08" data-end="2028-05" hidden>
+          <div class="strip__chart"></div>
+          <figcaption>
+            One block per month of the degree, August 2024 to May 2028.
+            <span class="strip__key"><i data-state="internship"></i>Internship</span>
+            <span class="strip__key"><i data-state="past"></i>Studied</span>
+            <span class="strip__key"><i data-state="future"></i>Still to come</span>
+          </figcaption>
+        </figure>
+
+        <article class="role" data-timeline-period="SKY ICT internship">
+          <p class="role__dates"><time datetime="2026-05">May</time> to <time datetime="2026-07">Jul 2026</time></p>
+          <div>
+            <h3>Solution and Delivery Engineer Intern</h3>
+            <p class="role__org">SKY ICT Public Company Limited · Bangkok</p>
+            <ul>
+              <li>Analysed airport check-in counter usage data to identify resource utilization and peak-hour bottlenecks, supporting decisions on how counters were allocated to airlines.</li>
+              <li>Analysed aircraft parking stand allocation data to surface scheduling conflicts and underused bays, highlighting where stand assignment could be tightened.</li>
+              <li>Assisted the project manager on an AOT airport performance monitoring project, tracking deliverables and preparing progress reports for stakeholders across teams.</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="role" data-timeline-period="Inteltion internship">
+          <p class="role__dates"><time datetime="2025-05">May</time> to <time datetime="2025-07">Jul 2025</time></p>
+          <div>
+            <h3>Data Engineer Intern</h3>
+            <p class="role__org">Inteltion Co., Ltd. · Bangkok</p>
+            <ul>
+              <li>Built Python reconciliation scripts that automatically compared records between source databases and target cloud storage, cutting the time the team spent manually locating discrepancies during migration.</li>
+              <li>Migrated production database tables to cloud storage, verifying row counts and field-level integrity after every transfer to confirm no data loss.</li>
+              <li>Traced and documented root causes of mismatched records with the engineering team, producing a repeatable validation checklist reused on later batches.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ───────────── Projects ───────────── -->
+    <section class="section wrap" id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+      <div class="section__body">
+
+        <article class="feature" id="homelab">
+          <p class="meta">Personal project · Oct 2026 to present</p>
+          <h3>Homelab</h3>
+          <div class="feature__intro">
+            <p>
+              A self-hosted network that I built and keep running at home. A Proxmox VE host runs services
+              in LXC containers. Beside it, a Raspberry Pi 5 runs Docker Compose and carries the parts
+              everything else depends on: DNS for the whole network, a reverse proxy, remote access and
+              monitoring.
+            </p>
+            <ul class="tags" aria-label="Built with">
+              <li>Proxmox VE</li>
+              <li>LXC</li>
+              <li>Raspberry Pi 5</li>
+              <li>Docker Compose</li>
+              <li>Debian</li>
+              <li>Pi-hole v6</li>
+              <li>Nginx Proxy Manager</li>
+              <li>Let's Encrypt</li>
+              <li>Cloudflare</li>
+              <li>Tailscale</li>
+              <li>Uptime Kuma</li>
+              <li>ntfy</li>
+            </ul>
+          </div>
+
+          <dl class="ledger">
+            <div>
+              <dt>DNS</dt>
+              <dd>Pi-hole v6 filters DNS for every device. Split-horizon DNS makes the internal wildcard domain resolve only on the LAN or the VPN, so it stays hidden from the public internet.</dd>
+            </div>
+            <div>
+              <dt>HTTPS</dt>
+              <dd>Nginx Proxy Manager sits in front of every internal service with a Let's Encrypt wildcard certificate, issued by DNS-01 challenge through the Cloudflare API with a least-privilege token. Every service gets HTTPS and no inbound port is open.</dd>
+            </div>
+            <div>
+              <dt>Remote access</dt>
+              <dd>A Tailscale subnet router, with no port forwarding. The DNS is designed so remote access keeps working even if Pi-hole goes down.</dd>
+            </div>
+            <div>
+              <dt>Monitoring</dt>
+              <dd>Uptime Kuma with DNS-level health checks rather than HTTP only, and ntfy push alerts to my phone.</dd>
+            </div>
+            <div>
+              <dt>Hardening</dt>
+              <dd>Pinned image versions and memory limits on containers. I triaged a published OpenSSH CVE against the running images to check exposure.</dd>
+            </div>
+            <div>
+              <dt>Troubleshooting</dt>
+              <dd>Worked through outbound SMTP and DNS connectivity problems with <code>dig</code>, <code>nc</code> and <code>openssl s_client</code>, and recovered broken Linux package states.</dd>
+            </div>
+            <div>
+              <dt>Documentation</dt>
+              <dd>One place for the IP plan (separate ranges for infrastructure and services, static assignments, a defined boot order), the DNS rules and the runbooks.</dd>
+            </div>
+          </dl>
+
+          <section class="lab" id="tracer" aria-labelledby="tracer-title">
+            <header class="lab__head">
+              <h4 id="tracer-title">Trace a request</h4>
+              <p>
+                A small model of how the lab answers a request, running in your browser. The domain and
+                addresses are examples, since the real ones stay private. Public names are looked up for
+                real over DNS-over-HTTPS.
+              </p>
+            </header>
+
+            <form class="lab__form" id="tracer-form" novalidate>
+              <fieldset class="lab__vantage">
+                <legend>The device is</legend>
+                <label><input type="radio" name="vantage" id="vantage-home" value="home" checked> <span>On home Wi-Fi</span></label>
+                <label><input type="radio" name="vantage" id="vantage-tailscale" value="tailscale"> <span>Away, on Tailscale</span></label>
+                <label><input type="radio" name="vantage" id="vantage-public" value="public"> <span>Away, no VPN</span></label>
+              </fieldset>
+
+              <label for="tracer-host">Hostname</label>
+              <div class="lab__field">
+                <input id="tracer-host" name="host" type="text" inputmode="url" value="pve.lab.example.com"
+                       autocomplete="off" autocapitalize="none" autocorrect="off" spellcheck="false"
+                       aria-describedby="tracer-error">
+                <button class="button button--primary" type="submit">Trace</button>
+              </div>
+              <p class="lab__error" id="tracer-error" role="alert" hidden></p>
+              <div class="lab__presets" role="group" aria-label="Examples">
+                <span>Try</span>
+                <button type="button" data-host="pve.lab.example.com">pve.lab.example.com</button>
+                <button type="button" data-host="kuma.lab.example.com">kuma.lab.example.com</button>
+                <button type="button" data-host="typo.lab.example.com">typo.lab.example.com</button>
+                <button type="button" data-host="ad.doubleclick.net">ad.doubleclick.net</button>
+                <button type="button" data-host="github.com">github.com</button>
+              </div>
+            </form>
+
+            <div class="topology" role="img" aria-label="Network diagram. Your device talks to a Raspberry Pi 5 that runs Tailscale, Pi-hole, Nginx Proxy Manager and Uptime Kuma with Docker Compose. The Pi sits in front of a home server running Proxmox VE with LXC containers. Pi-hole forwards public names to a public resolver.">
+              <div class="node" data-node="device">
+                <b>Your device</b><small>phone or laptop</small>
+              </div>
+              <span class="wire wire--a"></span>
+              <div class="group group--pi">
+                <span class="group__label">Raspberry Pi 5 · Docker Compose</span>
+                <div class="node" data-node="pihole"><b>Pi-hole</b><small>DNS :53</small></div>
+                <div class="node" data-node="npm"><b>Nginx Proxy Manager</b><small>HTTPS :443</small></div>
+                <div class="node" data-node="tailscale"><b>Tailscale</b><small>subnet router</small></div>
+                <div class="node" data-node="kuma"><b>Uptime Kuma</b><small>checks + ntfy alerts</small></div>
+              </div>
+              <span class="wire wire--b"></span>
+              <div class="group group--server">
+                <span class="group__label">Home server</span>
+                <div class="node" data-node="pve"><b>Proxmox VE</b><small>LXC containers</small></div>
+              </div>
+              <span class="wire wire--c"></span>
+              <div class="node node--outside" data-node="upstream">
+                <b>Public resolver</b><small>the internet</small>
+              </div>
+            </div>
+
+            <div class="trace" id="tracer-output">
+              <noscript>
+                <p>The tracer needs JavaScript. In short: on the LAN or the VPN, names under the internal domain resolve to the reverse proxy and reach their service over HTTPS. From outside they do not exist. Blocklisted names get 0.0.0.0, and everything else is forwarded to a public resolver.</p>
+              </noscript>
+            </div>
+          </section>
+        </article>
+
+        <article class="project">
+          <div class="project__text">
+            <p class="meta">Personal project · 2025</p>
+            <h3>Salmon Fortune</h3>
+            <p>
+              A daily horoscope web app built on LLM APIs. You ask about your day, pick a fortune-teller
+              persona, and get a reading in that persona's voice. Most of the work went into prompt variation
+              and into keeping responses well-formed when the model returned something unexpected.
+            </p>
+            <p class="project__links"><a href="https://github.com/Bossppp/Salmon-Fortune" rel="noopener">Code on GitHub</a></p>
+          </div>
+          <figure class="project__media" data-gallery>
+            <a href="assets/img/salmon-fortune.webp" data-caption="Salmon Fortune: a question and its reading.">
+              <img src="assets/img/salmon-fortune-sm.webp" width="720" height="322" loading="lazy" alt="Salmon Fortune showing a question box and a fortune reading on a salmon-coloured page.">
+            </a>
+            <figcaption><a href="assets/img/salmon-fortune-persona.webp" data-caption="Salmon Fortune: choosing a fortune-teller persona.">Persona picker</a></figcaption>
+          </figure>
+        </article>
+
+        <article class="project">
+          <div class="project__text">
+            <p class="meta">Personal project · 2024</p>
+            <h3>Heyranyik Bot</h3>
+            <p>
+              A Discord bot that reads payment-slip images submitted through Google Forms, writes the slip
+              data into Google Sheets, and then announces each payment in a Discord text channel.
+            </p>
+            <p class="project__links"><a href="https://github.com/Bossppp/HeyranyikBot" rel="noopener">Code on GitHub</a></p>
+          </div>
+          <figure class="project__media" data-gallery>
+            <a href="assets/img/heyranyik-discord.webp" data-caption="Heyranyik Bot announcing received payments in Discord.">
+              <img src="assets/img/heyranyik-discord-sm.webp" width="720" height="255" loading="lazy" alt="Discord messages from the bot listing payment dates and amounts in Thai.">
+            </a>
+          </figure>
+        </article>
+
+        <article class="project">
+          <div class="project__text">
+            <p class="meta">Term project · Data Science and Data Engineering</p>
+            <h3>Problem patterns across Bangkok districts</h3>
+            <p>
+              A clustering model that finds recurring problem patterns in different districts of Bangkok.
+              I handled data preparation, including cleaning and feature engineering, and managed the project.
+            </p>
+            <p class="project__links"><a href="https://github.com/DSDE-Project-SorKorRearn/Data-preparation" rel="noopener">Code on GitHub</a></p>
+          </div>
+          <figure class="project__media" data-gallery>
+            <a href="assets/img/bangkok-clusters.webp" data-caption="Problem clusters plotted on a map of one Bangkok district.">
+              <img src="assets/img/bangkok-clusters-sm.webp" width="720" height="338" loading="lazy" alt="Map of a Bangkok district with points coloured purple, yellow and teal by cluster.">
+            </a>
+          </figure>
+        </article>
+
+        <article class="project">
+          <div class="project__text">
+            <p class="meta">Term project · Embedded Systems</p>
+            <h3>Smart study room</h3>
+            <p>
+              A study room that switches into focus mode using face recognition on an ESP32. The system has
+              three boards: two gateways and one sensor node. I designed the system and built the gateway,
+              which carries messages between the sensor node and the cloud and drives the actuators from the
+              system state.
+            </p>
+            <p class="project__links"><a href="https://github.com/Embedded-System-Project-Acoustic/Full-Microcontroller" rel="noopener">Code on GitHub</a></p>
+          </div>
+          <figure class="project__media" data-gallery>
+            <a href="assets/img/study-room-model.webp" data-caption="Scale model of the study room with the LED strip and sensor boards.">
+              <img class="is-photo" src="assets/img/study-room-model-sm.webp" width="720" height="960" loading="lazy" alt="A black scale model of a room fitted with an LED strip and microcontroller boards.">
+            </a>
+            <figcaption><a href="assets/img/study-room-wiring.webp" data-caption="Gateway wiring on a breadboard.">Gateway wiring</a></figcaption>
+          </figure>
+        </article>
+
+        <article class="project">
+          <div class="project__text">
+            <p class="meta">Term project · Software Engineering · 2025</p>
+            <h3>Hotel booking system</h3>
+            <p>
+              A web-based hotel reservation platform with role-based access control and CRUD for bookings,
+              rooms and guest records. I worked on the frontend and on testing: manual test cases across guest,
+              staff and admin roles to check permission boundaries, and end-to-end tests with Playwright.
+            </p>
+            <p class="project__links"><a href="https://github.com/2110503-2564/se-project-22_more-concern-na" rel="noopener">Code on GitHub</a></p>
+          </div>
+          <figure class="project__media" data-gallery>
+            <a href="assets/img/hotel-rooms.webp" data-caption="Hotel booking system: room management for an admin.">
+              <img src="assets/img/hotel-rooms-sm.webp" width="720" height="345" loading="lazy" alt="Room management screen with room cards and an edit-hotel form.">
+            </a>
+            <figcaption><a href="assets/img/hotel-tests.webp" data-caption="Playwright end-to-end tests for room management.">Playwright tests</a></figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <!-- ───────────── Skills ───────────── -->
+    <section class="section wrap" id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills</h2>
+      <div class="section__body">
+        <dl class="ledger">
+          <div>
+            <dt>Programming</dt>
+            <dd>Python, C++, JavaScript, SQL, HTML and CSS, Java (basic)</dd>
+          </div>
+          <div>
+            <dt>Data and analysis</dt>
+            <dd>Data cleaning and validation, reconciliation, clustering and pattern analysis, operational reporting, Microsoft Excel</dd>
+          </div>
+          <div>
+            <dt>Infrastructure</dt>
+            <dd>Linux (Debian), Proxmox VE and LXC, Docker Compose, DNS and split-horizon, reverse proxying, TLS and ACME, Tailscale and WireGuard, Cloudflare, Uptime Kuma, IP planning, technical documentation</dd>
+          </div>
+          <div>
+            <dt>Testing and QA</dt>
+            <dd>Manual test case design, black-box testing, regression re-testing, defect documentation, edge-case and boundary analysis, end-to-end tests with Playwright</dd>
+          </div>
+          <div>
+            <dt>Tools and platforms</dt>
+            <dd>Git, GitHub, SQL databases, Databricks</dd>
+          </div>
+          <div>
+            <dt>Languages</dt>
+            <dd>Thai (native), English (intermediate)</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ───────────── Education ───────────── -->
+    <section class="section wrap" id="education" aria-labelledby="education-title">
+      <h2 id="education-title">Education</h2>
+      <div class="section__body">
+        <dl class="ledger ledger--dated">
+          <div>
+            <dt>2024 to 2028 <small>expected</small></dt>
+            <dd><strong>Chulalongkorn University</strong>, Bangkok<br>Bachelor of Engineering, Computer Engineering and Digital Technology (CEDT)</dd>
+          </div>
+          <div>
+            <dt>2021 to 2024</dt>
+            <dd><strong>Satriwitthaya 2 School</strong>, Bangkok<br>Science and Mathematics Program</dd>
+          </div>
+        </dl>
+
+        <h3 class="subhead">Activities</h3>
+        <dl class="ledger ledger--dated">
+          <div>
+            <dt>2025</dt>
+            <dd><strong>Activity staff and MC</strong>, Vishnu Camp (23rd)<br>Orientation camp for incoming first-year students</dd>
+          </div>
+          <div>
+            <dt>2024</dt>
+            <dd><strong>Invigilation staff</strong>, ICPC Thailand National Competition</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ───────────── Contact ───────────── -->
+    <section class="section wrap contact" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title">Contact</h2>
+      <div class="section__body">
+        <p class="contact__lede">Email is the fastest way to reach me.</p>
+        <p class="contact__email">
+          <a href="mailto:peerawit_boss@hotmail.com" id="email">peerawit_boss@hotmail.com</a>
+          <button class="button" type="button" data-copy="#email" hidden>Copy</button>
+        </p>
+        <ul class="actions" aria-label="Elsewhere">
+          <li><a class="button" href="https://github.com/Bossppp" rel="me noopener">GitHub</a></li>
+          <li><a class="button" href="https://www.linkedin.com/in/peerawit-seemamahawong-65518a340/" rel="me noopener">LinkedIn</a></li>
+          <li><a class="button" href="cv/Peerawit-Seemamahawong-CV.pdf">CV <span class="button__hint">PDF</span></a></li>
+          <li><a class="button" href="cv/">CV <span class="button__hint">web</span></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer wrap">
+    <p>© 2026 Peerawit Seemamahawong</p>
+    <p>
+      Plain HTML, CSS and JavaScript. No framework, no build step, no trackers.
+      <a href="https://github.com/Bossppp/Bossppp.github.io" rel="noopener">Read the source</a>.
+      The pink is Chulalongkorn's.
+    </p>
+  </footer>
+
+  <!-- Image viewer, opened by js/lightbox.js. Without JavaScript the thumbnails are ordinary links. -->
+  <dialog class="lightbox" id="lightbox" aria-label="Image viewer">
+    <figure>
+      <figcaption></figcaption>
+    </figure>
+    <div class="lightbox__bar">
+      <button class="button" type="button" data-action="prev">Previous</button>
+      <span class="lightbox__count" aria-live="polite"></span>
+      <button class="button" type="button" data-action="next">Next</button>
+      <button class="button" type="button" data-action="close">Close</button>
     </div>
-    
-    <div id="projects" class="content hidden">
-        <h1>Projects</h1>
-        <!-- Personal Projects Section -->
-        <div class="projects-category">
-            <div class="category-header">
-                <h2>Personal Projects</h2>
-            </div>
-            
-            <div class="project">
-                <h2>"Heyranyik bot"</h2>
-                <div class="project-imgcontainer">
-                    <img src="assets/projects/P1heyranyikDis.png" alt="heyranikDis">
-                    <img src="assets/projects/P1heyranyikSheet.png" alt="heyranikSheet">
-                </div>
-                <p>This is a Discord bot that can analyze slip images from Google Forms and put the slip data into Google Sheets after that, it will notify data to text channel discord.</p>
-                <button class="button" onclick="location.href='https://github.com/Bossppp/HeyranyikBot'">GitHub Code</button>
-            </div>
-            
-            <div class="project">
-                <h2>"Salmon Fortune"</h2>
-                <div class="project-imgcontainer">
-                    <img src="assets/projects/P2salmonSelect.png" alt="salmonSelect">
-                    <img src="assets/projects/P2salmonResult.png" alt="salmonResult">
-                </div>
-                <p>This is a fortune teller with LLM. That can tell your daily fortune by asking and can select teller persona as you wish.</p>
-                <button class="button" onclick="location.href='https://github.com/Bossppp/Salmon-Fortune'">GitHub Code</button>
-            </div>
-        </div>
-        
-        <!-- University Term Projects Section -->
-        <div class="projects-category">
-            <div class="category-header term-projects">
-                <h2>University Term Projects</h2>
-            </div>
-            <div class="project">
-                <h2>Introduction to Data Science and Data Engineering (DSDE) term project</h2>
-                <div class="project-imgcontainer">
-                    <img src="assets/projects/PDsdevizPic.png" alt="vizPic">
-                </div>
-                <p>Developed a clustering model to analyze and identify recurring problem patterns in different districts of Bangkok. I was responsible for data preparation, including data cleaning and feature engineering, and also served as the project manager</p>
-                <button class="button" onclick="location.href='https://github.com/DSDE-Project-SorKorRearn/Data-preparation.git'">GitHub Code</button>
-            </div>
-            <div class="project">
-                <h2>Embedded System term project</h2>
-                <div class="project-imgcontainer">
-                    <img src="assets/projects/PEmControl.jpg" alt="Control" style="height: 300px; width: auto; margin-right: 10px;">
-                    <img src="assets/projects/PEmSimu.jpg" alt="Simu" style="height: 500px; width: auto;">
-                </div>
-                <p>Designed and developed a smart study room system that enables a focus mode through face recognition on ESP32. The system consists of three boards: two gateways and one sensor node. I worked as the system designer and implemented the gateway, which manages communication between sensor nodes and the cloud, as well as controls actuators based on system states.</p>
-                <button class="button" onclick="location.href='https://github.com/Embedded-System-Project-Acoustic/Full-Microcontroller.git'">GitHub Code</button>
-            </div>
-            <div class="project">
-                <h2>Software Engineering System term project</h2>
-                <div class="project-imgcontainer">
-                    <img src="assets/projects/PSeRoom.png" alt="Room">
-                    <img src="assets/projects/PSeTest.png" alt="Test" style="height: 300px; width: auto; margin-left: 10px;">
-                </div>
-                <p>Built a web-based hotel booking system with role-based access control and CRUD operations for reservations and management. I worked as a frontend developer and tester, and wrote end-to-end tests using Playwright to ensure system reliability and correctness.</p>
-                <button class="button" onclick="location.href='https://github.com/2110503-2564/se-project-22_more-concern-na.git'">GitHub Code</button>
-            </div>
-        </div>
-    </div>
-    
-    <footer class="footer">
-        <div class="footer-content">
-            <p>© 2024 Peerawit Seemamahawong. All Rights Reserved.</p>
-            <div class="social-links">
-                <a href="https://github.com/Bossppp">
-                    <img src="assets/github.png" width="40" height="40" alt="github">
-                </a>
-                <a href="https://www.linkedin.com/in/peerawit-seemamahawong-65518a340/">
-                    <img src="assets/linkedin.png" width="40" height="40" alt="linkedin">
-                </a>
-                <a href="mailto:peerawit_boss@hotmail.com">
-                    <img src="assets/envelope.png" width="40" height="40" alt="mail">
-                </a>
-            </div>
-        </div>
-    </footer>
-    <script src="script.js"></script>
+  </dialog>
 </body>
 </html>

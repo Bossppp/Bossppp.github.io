@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV · Peerawit Seemamahawong</title>
+  <meta name="description" content="Curriculum vitae of Peerawit Seemamahawong, Computer Engineering student at Chulalongkorn University.">
+  <link rel="canonical" href="https://bosspee.com/cv/">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="cv.css">
+</head>
+<body>
+  <!-- This page is the source of the PDF: `npm run build:cv` prints it to A4. -->
+  <nav class="toolbar" aria-label="CV">
+    <a href="../">bosspee.com</a>
+    <a href="Peerawit-Seemamahawong-CV.pdf">Download PDF</a>
+  </nav>
+
+  <main class="sheet">
+    <header class="masthead">
+      <h1>Peerawit Seemamahawong</h1>
+      <p class="masthead__title">Computer Engineering Student <span>|</span> Chulalongkorn University</p>
+      <ul class="masthead__contact">
+        <li><a href="mailto:peerawit_boss@hotmail.com">peerawit_boss@hotmail.com</a></li>
+        <!-- Left out of the public copy. `npm run build:cv -- --phone "..."` fills it in for a copy you send yourself. -->
+        <li data-slot="phone" hidden></li>
+        <li>Bangkok, Thailand</li>
+        <li><a href="https://github.com/Bossppp">github.com/Bossppp</a></li>
+        <li><a href="https://bosspee.com">bosspee.com</a></li>
+      </ul>
+    </header>
+
+    <section>
+      <h2>Summary</h2>
+      <p>
+        Computer Engineering and Digital Technology student at Chulalongkorn University with two internships spanning
+        data engineering and airport operations analytics. Comfortable moving between data pipelines, web applications,
+        embedded systems, and self-hosted infrastructure, and used to working with a team to turn messy operational data
+        into something people can act on. Interested in software development, data analysis, and the business problems
+        behind them.
+      </p>
+    </section>
+
+    <section>
+      <h2>Technical Skills</h2>
+      <dl class="skills">
+        <div><dt>Programming:</dt> <dd>Python, C++, JavaScript, SQL, Java (basic)</dd></div>
+        <div><dt>Data and Analysis:</dt> <dd>Data cleaning and validation, reconciliation, clustering and pattern analysis, operational reporting, Microsoft Excel</dd></div>
+        <div><dt>Infrastructure:</dt> <dd>Linux (Debian), Proxmox VE (LXC), Docker Compose, DNS (Pi-hole, split-horizon), reverse proxy and TLS (Nginx Proxy Manager, Let's Encrypt), Tailscale, Cloudflare, Uptime Kuma</dd></div>
+        <div><dt>Testing and QA:</dt> <dd>Manual test case design, black-box testing, regression re-testing, defect documentation, edge-case and boundary analysis</dd></div>
+        <div><dt>Tools and Platforms:</dt> <dd>Git, GitHub, SQL databases, Databricks</dd></div>
+        <div><dt>Languages:</dt> <dd>Thai (native), English (intermediate)</dd></div>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+
+      <article class="entry">
+        <header>
+          <h3>Solution and Delivery Engineer Intern<span>, SKY ICT Public Company Limited – Bangkok, Thailand</span></h3>
+          <p class="entry__dates">May 2026 – July 2026</p>
+        </header>
+        <ul>
+          <li>Analysed airport check-in counter usage data to identify resource utilization and peak-hour bottlenecks, supporting decisions on how counters were allocated to airlines</li>
+          <li>Assisted the project manager on an AOT airport performance monitoring project, tracking deliverables and preparing progress reporting for stakeholders across teams</li>
+          <li>Analysed aircraft parking stand allocation data to surface scheduling conflicts and underused bays, highlighting where stand assignment could be tightened</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <header>
+          <h3>Data Engineer Intern<span>, Inteltion Co., Ltd. – Bangkok, Thailand</span></h3>
+          <p class="entry__dates">May 2025 – July 2025</p>
+        </header>
+        <ul>
+          <li>Built Python reconciliation scripts that automatically compared records between source databases and target cloud storage, cutting the time the team spent manually locating discrepancies during migration</li>
+          <li>Migrated production database tables to cloud storage, verifying row counts and field-level integrity after every transfer to confirm no data loss</li>
+          <li>Traced and documented root causes of mismatched records with the engineering team, producing a repeatable validation checklist reused on later batches</li>
+        </ul>
+      </article>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+
+      <article class="entry">
+        <header>
+          <h3>Homelab<span> – Self-hosted Network and Infrastructure</span></h3>
+          <p class="entry__dates">Oct 2026 – Present</p>
+        </header>
+        <ul>
+          <li>Built and operate a home lab on Proxmox VE (LXC) and a Raspberry Pi 5 running Docker Compose, hosting network-wide DNS, a reverse proxy, remote access and monitoring, with the IP plan, DNS rules and runbooks documented in one place</li>
+          <li>Set up Pi-hole v6 with split-horizon DNS and Nginx Proxy Manager with a Let's Encrypt wildcard certificate (DNS-01 via Cloudflare), giving every internal service HTTPS with no inbound ports open; remote access runs through a Tailscale subnet router</li>
+          <li>Monitored services with Uptime Kuma (DNS-level health checks, ntfy alerts), hardened containers with pinned image versions and memory limits, and triaged a published OpenSSH CVE against the running images</li>
+        </ul>
+      </article>
+
+      <article class="entry">
+        <header>
+          <h3>Salmon Fortune<span> – Personal Project</span></h3>
+          <p class="entry__dates">2025</p>
+        </header>
+        <ul>
+          <li>Developed a daily horoscope prediction web application using LLM APIs with customizable fortune-teller personas</li>
+          <li>Handled prompt variation and unexpected model output to keep responses well-formed across all persona settings</li>
+        </ul>
+      </article>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <article class="entry">
+        <header>
+          <h3>Chulalongkorn University<span> – Bangkok, Thailand</span></h3>
+          <p class="entry__dates">2024 – 2028 (expected)</p>
+        </header>
+        <p>Bachelor of Engineering, Computer Engineering and Digital Technology (CEDT)</p>
+      </article>
+      <article class="entry">
+        <header>
+          <h3>Satriwitthaya 2 School<span> – Science and Mathematics Program, Bangkok, Thailand</span></h3>
+          <p class="entry__dates">2021 – 2024</p>
+        </header>
+      </article>
+    </section>
+
+    <section>
+      <h2>Extracurricular Activities</h2>
+      <article class="entry">
+        <header>
+          <h3>Invigilation Staff<span>, ICPC Thailand National Competition</span></h3>
+          <p class="entry__dates">2024</p>
+        </header>
+      </article>
+      <article class="entry">
+        <header>
+          <h3>Activity Staff and MC<span>, Vishnu Camp (23rd) – Orientation camp for incoming first-year students</span></h3>
+          <p class="entry__dates">2025</p>
+        </header>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
